@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>接口文档</title>
+	</head>
+	<body>
+		<!--<div><a href="./store_workbench/index.html">store_workbench</a></div>-->
+		<!--<div><a href="./good_manager_backend/index.html">good_manager_backend</a></div>-->
+		<!--<div><a href="./good_manager_backend_stock/index.html">good_manager_backend_stock</a></div>-->
+        <div id="content">
+
+        </div>
+
+        <script src="./vendor/jquery/jquery.min.js"></script>
+        <script type="application/javascript">
+            $(function () {
+                $.ajax({
+                    type: 'GET',
+                    url: '/api-doc/project',
+                    success: function (data) {
+                        if (data.success) {
+                            $.each(data.data, function (index, item) {
+                                $('#content').html('<div><a href="detail.html?name='+ item.name +'">' + item.name + '</a></div>');
+                            });
+                        } else {
+                            alert(data.message);
+                        }
+                    },
+                    error: function (xhr, errorType, error) {
+                        alert(error);
+                    }
+                });
+            });
+        </script>
+	</body>
+
+</html>
