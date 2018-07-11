@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>spring-boot-api-doc-db-web</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.RELEASE</version>
     <packaging>jar</packaging>
 
     <name>spring-boot-api-doc-db-web</name>
@@ -13,7 +13,7 @@
     <parent>
         <groupId>top.webdevelop.gull</groupId>
         <artifactId>spring-boot-api-doc-db-parent</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.RELEASE</version>
     </parent>
 
     <dependencies>
@@ -49,6 +49,14 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
             </plugin>
         </plugins>
     </build>

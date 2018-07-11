@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>spring-boot-starter-api-doc-db</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.RELEASE</version>
     <packaging>jar</packaging>
 
     <name>spring-boot-starter-api-doc-db</name>
@@ -13,7 +13,7 @@
     <parent>
         <groupId>top.webdevelop.gull</groupId>
         <artifactId>spring-boot-api-doc-db-parent</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.RELEASE</version>
     </parent>
 
     <dependencies>

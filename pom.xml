@@ -6,7 +6,7 @@
     <groupId>top.webdevelop.gull</groupId>
     <artifactId>spring-boot-api-doc-db-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.RELEASE</version>
 
     <name>spring-boot-api-doc-db</name>
     <description>Spring Boot Web API Document Generate</description>
@@ -74,7 +74,7 @@
             <dependency>
                 <groupId>top.webdevelop.gull</groupId>
                 <artifactId>spring-boot-starter-api-doc-db</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>1.0.RELEASE</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -119,6 +119,17 @@
                                 </goals>
                             </execution>
                         </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <version>1.6.8</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <serverId>oss</serverId>
+                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                        </configuration>
                     </plugin>
                 </plugins>
             </build>
